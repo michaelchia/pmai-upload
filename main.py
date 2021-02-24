@@ -65,6 +65,7 @@ def main():
         ]
 
     def _get_data(ticker):
+        print(ticker)
         try:
             df = blp.bdh(ticker, "PX_LAST", start_date=START_DATE, end_date="20990101")
         except (ValueError, RuntimeError):
@@ -96,3 +97,8 @@ def _upload_file(file, ticker, auth):
         verify=False)
     if resp.status_code != 200:
         resp.raise_for_status()
+
+
+if __name__ == "__main__":
+    main()
+    print("----------------DONE-----------------")
