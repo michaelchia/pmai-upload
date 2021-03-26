@@ -35,6 +35,7 @@ FXS = {
     "ccys": ["HKD", "SGD", "CNH"],
     "periods": ["1M", "2M", "3M", "6M", "9M", "12M"]
 }
+CORR = ["UX1 Index", "ESA Index", "TYA Comdty", "FVA Comdty", "YMA Comdty", "XMA Comdty", "RXA Comdty", "JBA Comdty"]
 
 START_DATE = "20140101"
 
@@ -56,6 +57,7 @@ def main():
     blp.start()
 
     tickers = []
+    tickers += CORR
     for prod in [XCCY, IRS, FXS]:
         type_, ccys, periods = prod["type"], prod["ccys"], prod["periods"]
         tickers += [
