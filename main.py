@@ -27,7 +27,7 @@ XCCY = {
 }
 IRS = {
     "type": "SW",
-    "ccys": ["US", "HD", "SD"],
+    "ccys": ["US", "HD", "SD", "AD"],
     "periods": [1, 2, 3, 4, 5, 7, 10]
 }
 FXS = {
