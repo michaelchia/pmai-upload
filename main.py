@@ -3,6 +3,7 @@ import requests
 import json
 import time
 import io
+import os
 
 import pdblp
 
@@ -42,7 +43,7 @@ START_DATE = "20140101"
 BUCKET_NAME = "blpdata"
 FOLDER = "raw/"
 
-CRED_PATH = "cred.json.txt"
+CRED_PATH = "cred.json"
 
 UPLOAD_URL = "https://pmai-297814.et.r.appspot.com/upload"
 
@@ -102,5 +103,6 @@ def _upload_file(file, ticker, auth):
 
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(__file__))
     main()
     print("----------------DONE-----------------")
